@@ -3,11 +3,46 @@
     background-size: 100%;
     background-repeat: no-repeat;
     padding: 3%;
-    position: fixed;
+    /* position: fixed; */
+    overflow: hidden;
     top: -3%;
 }
 
-.footer {
-    position: fixed;
-    bottom: 0;
+.filter{
+    padding: 2%;
+    margin-top: -5%;
+    margin-bottom: 5%;
+    border-radius: 6px;
 }
+.filter input{
+    background-color: unset;
+    border: none;
+}
+.filter input:focus, textarea{
+    outline: none;
+}
+
+.filter select{
+    background-color: unset;
+    border: none;
+}
+
+.card{
+    height: 300px;
+}
+.card:hover{
+    opacity: 0.5;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+
+.footer {
+    /* position: fixed;
+    bottom: 0; */
+    background-color: white;
+    width: 100%;
+    padding: 2%;
+}
+
+

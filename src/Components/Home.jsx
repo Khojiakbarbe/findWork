@@ -29,7 +29,7 @@ export default function Home() {
 
 
     return (
-        <div className="container mt-5 mb-5">
+        <div style={{marginTop:'20%'}} className="container mt-5 mb-5">
             <div className="row">
                 {data.map(post => {
                     return (

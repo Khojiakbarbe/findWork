@@ -1,3 +1,13 @@
-body {
-    background-color: #F4F6F8;
+.myNavbar{
+    background-image: url(assets/Triangle.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    padding: 3%;
+    position: fixed;
+    top: -3%;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
 }

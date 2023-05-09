@@ -7,7 +7,7 @@ export default function Home() {
     const navigate = useNavigate();
 
     const [data, setData] = useState([]);
-    const [sliceCount, setSliceCount] = useState(4)
+    const [sliceCount, setSliceCount] = useState(6)
 
     useEffect(() => {
         axios.get('http://localhost:9000/work')
@@ -19,7 +19,7 @@ export default function Home() {
     }, [])
 
     function loadMore() {
-        setSliceCount(sliceCount + 4)
+        setSliceCount(sliceCount + 6)
         axios.get('http://localhost:9000/work')
             .then(res => {
                 setData(res.data.slice(0, sliceCount))
@@ -34,7 +34,7 @@ export default function Home() {
                 {data.map(post => {
                     return (
                         <div key={post.id} className="col-md-4 mb-2" onClick={() => navigate(`/${post.id}`)}>
-                            <div className="card p-5">
+                            <div className="card p-5" style={{height:'300px'}}>
                                 <p style={{ color: 'gray' }}>{post.postedAt}. {post.contract}</p>
                                 <h3><strong>{post.position}</strong></h3>
                                 <p style={{ color: 'gray' }}>{post.company}</p>
@@ -44,7 +44,9 @@ export default function Home() {
                     )
                 })}
             </div>
-            <button className="btn btn-primary" onClick={() => loadMore()}>Load More</button>
+            <div style={{textAlign:'center'}}>
+            <button className="btn btn-primary mt-5" onClick={() => loadMore()}>Load More</button>
+            </div>
         </div>
     )
 }

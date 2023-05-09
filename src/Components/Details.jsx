@@ -1,7 +1,6 @@
 import { useEffect, useState,useContext } from "react";
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
-
 import { changeModeContext } from "./DataProvider/DataContext";
 
 
@@ -20,8 +19,9 @@ export default function Details() {
     }, [])
 
 
+
     return (
-        <div >
+        <div data-aos="zoom-in">
             <div className="container mt-5 mb-5 p-5 " style={mode ? {backgroundColor:'white'} : {backgroundColor:'#19202D', color:'white'}}>
                 <p style={{ color: 'gray' }}>{detail.postedAt}. {detail.contract}</p>
                 <h1><strong>{detail.position}</strong></h1>
@@ -53,7 +53,7 @@ export default function Details() {
             </div>
 
 
-            <div className="footer " >
+            <div className="footer " style={mode ? {backgroundColor:'white'}: {backgroundColor:'#19202D', color:'white'}}>
                 <div className="row text-center" style={{ width: '85%', margin: '0 auto' }}>
                     <div className="col-md-6">
                         <h3>{detail.position}</h3>

@@ -43,7 +43,6 @@ export default function Apply() {
                 'experiance': experiance
             })
                 .then(res => {
-                    console.log(res.data);
                     alert(`You successfuly Applyed to Position ${position}`)
                     navigate('/')
                 })

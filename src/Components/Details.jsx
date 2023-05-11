@@ -21,7 +21,6 @@ export default function Details() {
 
 
 
-    console.log(detail);
 
     return (
         <div data-aos="zoom-in">

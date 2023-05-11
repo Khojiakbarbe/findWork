@@ -753,5 +753,17 @@
         ]
       }
     }
+  ],
+  "applys": [
+    {
+      "company": "Scoot",
+      "contract": "Full Time",
+      "position": "Senior Software Engineer",
+      "name": "Khojiakbarbek",
+      "lastName": "Nosiraliyev",
+      "engLevel": "b1",
+      "experiance": "1-3",
+      "id": 1
+    }
   ]
 }

@@ -1,11 +1,12 @@
 import { useEffect, useState, useContext } from "react";
 import axios from 'axios'
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 import { changeModeContext } from "./DataProvider/DataContext";
 
 
 export default function Details() {
 
+    const navigate = useNavigate();
     const { id } = useParams();
     const [mode, setMode] = useContext(changeModeContext)
 
@@ -20,9 +21,7 @@ export default function Details() {
 
 
 
-    function apply(){
-        alert(`You successfuly applyed to ${detail.position}`)
-    }
+    console.log(detail);
 
     return (
         <div data-aos="zoom-in">
@@ -63,7 +62,7 @@ export default function Details() {
                         <h3>{detail.position}</h3>
                     </div>
                     <div className="col">
-                        <button className="btn btn-primary" onClick={() => apply()}>Apply Now</button>
+                        <button className="btn btn-primary" onClick={() => navigate('/apply', { state: { id: 1, company: detail.company, contract: detail.contract, position: detail.position } })}>Apply Now</button>
                     </div>
                 </div>
             </div>

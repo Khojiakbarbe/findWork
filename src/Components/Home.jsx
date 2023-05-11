@@ -70,7 +70,8 @@ export default function Home() {
     if (filterName && filterLocation) {
         const filter = data.filter(filter => filter.company.toLowerCase().includes(filterName.toLowerCase()) && filter.location.toLowerCase().includes(filterLocation.toLowerCase()) && filter.contract.toLowerCase() == fullTime.toLowerCase())
         filtered.push(filter)
-    } else if (filterName) {
+    }
+    if (filterName) {
         const filter = data.filter(filter => filter.company.toLowerCase().includes(filterName.toLowerCase()))
         filtered.push(filter)
     } else if (filterLocation) {
@@ -104,11 +105,11 @@ export default function Home() {
 
                     <>
                         <div className="filter row  " style={mode ? { backgroundColor: 'white' } : { backgroundColor: '#19202D', color: 'white' }}>
-                            <div className="col">
+                            <div className="col filterCol">
                                 <AiOutlineSearch />
                                 <input type="dorm-control" style={mode ? { color: 'black' } : { color: 'white' }} onChange={(e) => setFilterName(e.target.value)} placeholder="Filter by title, companies, expertise…" />
                             </div>
-                            <div className="col">
+                            <div className="col filterCol">
                                 <MdLocationOn />
                                 <select onChange={(e) => setFilterLocation(e.target.value)} style={mode ? { color: 'black' } : { color: 'white', backgroundColor: '#19202D' }}>
                                     <option value="">Filter by location</option>
@@ -121,7 +122,7 @@ export default function Home() {
                                     }
                                 </select>
                             </div>
-                            <div className="col">
+                            <div className="col filterCol">
                                 <input type="checkbox" onClick={() => { fullTime == '' ? setFullTime("Full Time") : setFullTime('') }} id="fullTime" />
                                 <label htmlFor="fullTime">Full Time Only</label>
                                 <button className="btn btn-primary" onClick={() => search()}>Search</button>
@@ -135,7 +136,7 @@ export default function Home() {
                                         {
                                             filtered[0].map(post => {
                                                 return (
-                                                    <div key={post.id} className="col-md-4 mb-2" onClick={() => navigate(`/${post.id}`)}>
+                                                    <div key={post.id} className="myCols col-md-4 mb-2" onClick={() => navigate(`/${post.id}`)}>
                                                         <div className="card p-5" style={mode ? { backgroundColor: 'white' } : { backgroundColor: '#19202D', color: 'white' }}>
                                                             <p style={{ color: 'gray' }}>{post.postedAt}. {post.contract}</p>
                                                             <h3><strong>{post.position}</strong></h3>

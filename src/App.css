@@ -1,37 +1,120 @@
-.myNavbar{
+.myNavbar {
     background-image: url(assets/Triangle.png);
-    background-size: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
     padding: 4%;
     overflow: hidden;
 }
 
-.filter{
+.filter {
     padding: 2%;
     margin-top: -5%;
     margin-bottom: 5%;
     border-radius: 6px;
 }
-.filter input{
+
+.filter input {
     background-color: unset;
     border: none;
 }
-.filter input:focus, textarea{
+
+.filter input:focus,
+textarea {
     outline: none;
 }
 
-.filter select{
+.filter select {
     background-color: unset;
     border: none;
 }
+.filter :nth-child(3) button{
+    display: inline-block;
+    margin-left: 2%;
+}
 
-.card{
+.card {
     height: 300px;
 }
-.card:hover{
+
+.card:hover {
     opacity: 0.5;
     transition: 0.5s;
     cursor: pointer;
+}
+
+
+@media only screen and (max-width: 995px) {
+
+    .filter {
+        padding: 4%;
+        margin-top: -10%;
+    }
+
+    .filterCol {
+        font-size: 70%;
+    }
+
+
+    .filterCol button {
+        font-size: 70%;
+    }
+
+    .myCols {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 620px) {
+    .filter {
+        display: flex;
+        justify-content: space-around;
+        font-size: medium;
+    }
+
+    .filterCol {
+        font-size: 60%;
+    }
+
+
+    .filterCol button {
+        font-size: 70%;
+    }
+
+    .myCols {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 490px) {
+
+    .filter {
+        margin-top: -15%;
+    }
+
+    .filterCol {
+        font-size: 80%;
+    }
+
+    .filterCol:nth-child(2) {
+        display: none;
+    }
+
+    .filterCol:nth-child(3) label , #fullTime{
+        display: none;
+        font-size: 80%;
+    }
+
+    .filterCol button {
+        display: block;
+    }
+
+    p{
+        font-size: 80%;
+    }
+    h3{
+        font-size: 110%;
+    }
+
 }
 
 
@@ -42,5 +125,3 @@
     width: 100%;
     padding: 2%;
 }
-
-

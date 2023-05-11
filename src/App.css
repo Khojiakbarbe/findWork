@@ -2,10 +2,8 @@
     background-image: url(assets/Triangle.png);
     background-size: 100%;
     background-repeat: no-repeat;
-    padding: 3%;
-    /* position: fixed; */
+    padding: 4%;
     overflow: hidden;
-    top: -3%;
 }
 
 .filter{

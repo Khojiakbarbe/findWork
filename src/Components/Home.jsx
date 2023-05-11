@@ -135,7 +135,7 @@ export default function Home() {
                                         {
                                             filtered[0].map(post => {
                                                 return (
-                                                    <div  key={post.id} className="col-md-4 mb-2" onClick={() => navigate(`/${post.id}`)}>
+                                                    <div key={post.id} className="col-md-4 mb-2" onClick={() => navigate(`/${post.id}`)}>
                                                         <div className="card p-5" style={mode ? { backgroundColor: 'white' } : { backgroundColor: '#19202D', color: 'white' }}>
                                                             <p style={{ color: 'gray' }}>{post.postedAt}. {post.contract}</p>
                                                             <h3><strong>{post.position}</strong></h3>
